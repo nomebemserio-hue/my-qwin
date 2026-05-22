@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qwen 2.5 Coder Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating chat bubble -->
+  <div id="chatBubble" class="bubble">
+    <span class="icon">💬</span>
+  </div>
+
+  <!-- Chat window (hidden initially) -->
+  <div id="chatWindow" class="window hidden">
+    <div class="header">Qwen 2.5 Coder Assistant</div>
+    <div id="messages" class="messages"></div>
+    <div class="input-area">
+      <textarea id="userInput" placeholder="Type your message…"></textarea>
+      <div class="file-section">
+        <input type="file" id="fileInput" />
+        <select id="outputType" class="output-select">
+          <option value="auto" selected>Automatic</option>
+          <option value="txt">.txt</option>
+          <option value="java">.java</option>
+          <option value="jar">.jar</option>
+          <option value="zip">.zip</option>
+          <option value="pdf">.pdf</option>
+        </select>
+      </div>
+      <button id="sendBtn" class="send-btn">Send</button>
+    </div>
+    <button id="closeBtn" class="close-btn">✕</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
